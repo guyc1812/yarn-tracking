@@ -1,0 +1,43 @@
+ YARN AM launch context:
+     user class: com._4pd.spark.WordCount
+     env:
+         CLASSPATH -> {{PWD}}<CPS>
+                      {{PWD}}/__spark_conf__<CPS>
+                      {{PWD}}/__spark_libs__/*<CPS>
+                      $HADOOP_CLIENT_CONF_DIR<CPS>$HADOOP_CONF_DIR<CPS>
+                      $HADOOP_COMMON_HOME/*<CPS>$HADOOP_COMMON_HOME/lib/*<CPS>
+                      $HADOOP_HDFS_HOME/*<CPS>$HADOOP_HDFS_HOME/lib/*<CPS>
+                      $HADOOP_YARN_HOME/*<CPS>$HADOOP_YARN_HOME/lib/*<CPS>
+                      $HADOOP_MAPRED_HOME/*<CPS>$HADOOP_MAPRED_HOME/lib/*<CPS>
+                      $MR2_CLASSPATH<CPS>
+                      {{PWD}}/__spark_conf__/__hadoop_conf__
+         SPARK_YARN_STAGING_DIR -> *********(redacted)
+         SPARK_USER -> *********(redacted)
+     resources:
+         log4j-info.properties ->  resource { scheme: "hdfs" host: "nameservice1" port: -1 file: "/user/guyc/.sparkStaging/application_1571091072053_54110/log
+         4j-info.properties" }  size: 1733 timestamp: 1571897675844 type: FILE visibility: PRIVATE
+         log4j-warn.properties ->  resource { scheme: "hdfs" host: "nameservice1" port: -1 file: "/user/guyc/.sparkStaging/application_1571091072053_54110/log
+         4j-warn.properties" }  size: 1733 timestamp: 1571897676218 type: FILE visibility: PRIVATE
+         log4j-debug.properties -> resource { scheme: "hdfs" host: "nameservice1" port: -1 file: "/user/guyc/.sparkStaging/application_1571091072053_54110/log
+         4j-debug.properties" } size: 1734 timestamp: 1571897676038 type: FILE visibility: PRIVATE
+         gson-2.8.0.jar -> resource { scheme: "hdfs" host: "nameservice1" port: -1 file: "/user/guyc/.sparkStaging/application_1571091072053_54110/gson-2.8.0.
+         jar" }  size: 231952 timestamp: 1571897675600 type: FILE visibility: PRIVATE
+         __app__.jar -> resource { scheme: "hdfs" host: "nameservice1" port: -1 file: "/user/guyc/.sparkStaging/application_1571091072053_54110/word-count-dem
+         o.jar" }  size: 19973 timestamp: 1571897675241 type: FILE visibility: PRIVATE
+         __spark_conf__ -> resource { scheme: "hdfs" host: "nameservice1" port: -1 file: "/user/guyc/.sparkStaging/application_1571091072053_54110/__spark_con
+         f__.zip" }  size: 165176 timestamp: 1571897676647 type: ARCHIVE visibility: PRIVATE
+         __spark_libs__/*.jar ->  resource { scheme: "hdfs" host: "nameservice1" port: -1 file: "/tmp/spark-lib/2.3.0/*.jar" }  size: 2189117 timestamp: 15712
+         45965236 type: FILE visibility: PUBLIC
+     command:
+         {{JAVA_HOME}}/bin/java
+         -server
+         -Xmx512m
+         -Djava.io.tmpdir={{PWD}}/tmp
+         -Dlog4j.configuration=log4j-debug.properties
+         -Dspark.yarn.app.container.log.dir=<LOG_DIR>
+         org.apache.spark.deploy.yarn.ApplicationMaster
+         --class 'com._4pd.spark.WordCount'
+         --jar src/test/resources/jar-files/word-count-demo.jar
+         --properties-file {{PWD}}/__spark_conf__/__spark_conf__.properties
+         1> <LOG_DIR>/stdout
+         2> <LOG_DIR>/stderr
