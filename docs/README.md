@@ -11,18 +11,18 @@
 
 ### YARN 任务跟踪探明
 
-* [「主线*」准备一块敲门砖: Word Count Demo](./1.&#32;Demo.md)
-* [「主线*」向 YARN 提交 Spark 应用](./2.&#32;Client.md)
+* [「主线」准备一块敲门砖: Word Count Demo](./1.&#32;Demo.md)
+* [「主线」向 YARN 提交 Spark 应用](./2.&#32;Client.md)
     * [「支线」Client 参数的版本变更](./2.1&#32;ClientArguments.md)
-* [「主线*」ResourceManager 出场](./3.&#32;ResourceManager.md)
+* [「主线」ResourceManager 出场](./3.&#32;ResourceManager.md)
     * [「支线」ResourceManager 之 RMContext](./3.1&#32;RMContext.md)
     * [「支线」ResourceManager 之事件机制](./3.2&#32;EventDispatcher.md)
     * [「支线」ResourceManager 之高可用](./3.3&#32;RMHignAvaliable.md) (TODO)
-* [「主线*」ApplicationMaster 出场](./4.&#32;ApplicationMaster.md)
+* [「主线」ApplicationMaster 出场](./4.&#32;ApplicationMaster.md)
     * [「支线」从 NEW 到 SUBMITTED](./4.1&#32;AM-1.md) (TODO)
     * [「支线」从 SUBMITTED 到 ACCEPTED]() (TODO)
     * [「支线」从 ACCEPTED 到 RUNNING]() (TODO)
-* [「主线*」NodeManager 出场]() (TODO)
+* [「主线」NodeManager 出场]() (TODO)
     * ...
 
 
