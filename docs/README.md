@@ -1,6 +1,6 @@
 ## 不求甚解
 
-本系列以 WordCount 任务作为敲门砖，追踪一个 Spark 应用提交到 YARN 运行的完整轨迹，探明 YARN 任务的运行机制以及 YARN 集群的设计思想等入门级理论。目的就是希望能够以最简单的方式来了解顶尖系统的设计。
+本系列以 WordCount 任务作为敲门砖，追踪一个 Spark 应用提交到 YARN 运行的完整轨迹，探明 YARN 任务的运行机制和 YARN 集群的设计思想等入门级理论。目的就是希望能够以最简单的方式来了解顶尖系统的设计。
 
 本系列只是作者的学习笔记，意求能够大略源码，简单总结，备忘再温故。
 
@@ -29,10 +29,10 @@
 
 ### 相关链接
 
-[Hadoop 官方文档](http://hadoop.apache.org/docs/r2.7.4/hadoop-yarn/hadoop-yarn-site/index.html)
+* [Hadoop 官方文档](http://hadoop.apache.org/docs/r2.7.4/hadoop-yarn/hadoop-yarn-site/index.html)
 
-[Hadoop-Yarn 源码(2.7.4)](https://github.com/apache/hadoop/tree/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn)
+* [Hadoop-Yarn 源码(2.7.4)](https://github.com/apache/hadoop/tree/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn)
 
-[Spark 官方文档](http://spark.apache.org/docs/2.3.0/)
+* [Spark 官方文档](http://spark.apache.org/docs/2.3.0/)
 
-[Spark 源码(2.3.0)](https://github.com/apache/spark/tree/v2.3.0)
+* [Spark 源码(2.3.0)](https://github.com/apache/spark/tree/v2.3.0)
