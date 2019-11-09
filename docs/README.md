@@ -22,7 +22,7 @@
     * [「支线」**从 NEW 到 SUBMITTED**](./4.1&#32;AM-1.md) (TODO)
     * [「支线」**从 SUBMITTED 到 ACCEPTED**]() (TODO)
     * [「支线」**从 ACCEPTED 到 RUNNING**]() (TODO)
-* [「主线」NodeManager 出场]() (TODO)
+* [「主线」**NodeManager 出场**]() (TODO)
     * ...
 
 
