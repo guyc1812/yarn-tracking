@@ -4,24 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com._4paradigm.prophet</groupId>
+    <groupId>com._4pd.gugugu</groupId>
     <artifactId>spark-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scala.version>2.11.6</scala.version>
+        <scala.version>2.11.12</scala.version>
         <spark.version>2.3.0</spark.version>
         <hadoop.version>2.7.4</hadoop.version>
-        <scala.maven.version>2.11.6</scala.maven.version>
+        <scala.maven.version>2.11.12</scala.maven.version>
         <scala.version.suffix>_2.11</scala.version.suffix>
         <PermGen>128m</PermGen>
         <MaxPermGen>1024m</MaxPermGen>
         <CodeCacheSize>1024m</CodeCacheSize>
     </properties>
 
-    <dependencyManagement>
     <dependencies>
         <!-- spark -->
         <dependency>
@@ -124,7 +123,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    </dependencyManagement>
 
     <build>
         <finalName>word-count-demo</finalName>
