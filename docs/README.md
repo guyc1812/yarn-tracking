@@ -13,7 +13,7 @@
 
 * [「主线」准备一块敲门砖: Word Count Demo](./1.&#32;Demo.md)
 * [「主线」向 YARN 提交 Spark 应用](./2.&#32;Client.md)
-    * [「支线」Client 参数的版本变更](./2.1&#32;ClientArguments.md)
+    * [「支线」支线：ClientArguments 在 Spark 1.x 与 2.x 中的使用变更](./2.1&#32;ClientArguments.md)
 * [「主线」ResourceManager 出场](./3.&#32;ResourceManager.md)
     * [「支线」ResourceManager 之 RMContext](./3.1&#32;RMContext.md)
     * [「支线」ResourceManager 之事件机制](./3.2&#32;EventDispatcher.md)
