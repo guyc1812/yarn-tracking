@@ -24,11 +24,10 @@
     * [「支线」ResourceManager 之高可用 (TODO)](./3.3&#32;RMHignAvaliable.md)
     * [「支线」ResourceManager 之资源调度器 (TODO)](./3.4&#32;ResourceScheduler.md)
 * [「主线」ApplicationMaster 出场](./4.&#32;ApplicationMaster.md)
-    * [「支线」从 NEW 到 SUBMITTED](./4.1&#32;AM-1.md) (TODO)
-    * [「支线」从 SUBMITTED 到 ACCEPTED]() (TODO)
-    * [「支线」从 ACCEPTED 到 RUNNING]() (TODO)
-* [「主线」NodeManager 出场]() (TODO)
-    * ...
+* [「主线」从 NEW 到 SUBMITTED](./4.1&#32;AM-1.md) (TODO)
+* [「主线」从 SUBMITTED 到 ACCEPTED]() (TODO)
+* [「主线」从 ACCEPTED 到 RUNNING]() (TODO)
+* ***未完待续***
 
 <br>
 
