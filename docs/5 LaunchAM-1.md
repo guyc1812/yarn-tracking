@@ -15,17 +15,17 @@
 
 <br><h3 id="1"><b>先放图</b></h3>
 
-![此处有图](TODO)
+![NEW-ACCEPTED](./images/new-accept.png)
 
 <br><h3 id="2"><b>本篇提及到的组件</b></h3>
 
 * ClientRMService
 * AsyncDispatcher
+* CapacityScheduler
 * RMAppManager
 * RMAppImpl
 * RMStateStore
 * RMAppAttemptImpl
-* CapacityScheduler
 
 <br><h3 id="3"><b>从接收客户端应用提交请求开始</b></h3>
 
