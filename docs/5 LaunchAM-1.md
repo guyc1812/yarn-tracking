@@ -4,13 +4,18 @@
 
 ## 从 NEW 到 ACCEPTED
 
+* [先放图](./5&#32;LaunchAM-1.md#1)
+* [本篇提及到的组件](./5&#32;LaunchAM-1.md#2)
+* [从接收客户端应用提交请求开始](./5&#32;LaunchAM-1.md#3)
+* [请求传递给 YARN 应用的真正管理者：RMAppManager](./5&#32;LaunchAM-1.md#4)
+* [从 `NEW` 到 `NEW_SAVING`](./5&#32;LaunchAM-1.md#5)
+* [相关链接](./5&#32;LaunchAM-1.md#6)
 
-
-### 图在先
+<br><h3 id="1"><b>先放图</b></h3>
 
 ![此处有图](TODO)
 
-### 本篇提及到的组件
+<br><h3 id="2"><b>本篇提及到的组件</b></h3>
 
 * ClientRMService
 * AsyncDispatcher
@@ -20,17 +25,15 @@
 * RMAppAttemptImpl
 * CapacityScheduler
 
-### **从接收客户端应用提交请求开始**
+<br><h3 id="3"><b>从接收客户端应用提交请求开始</b></h3>
 
-ResourceManager 响应 Client 请求的主角: ClientRMService
+ResourceManager 响应 Client 请求的主角: **ClientRMService**
 
-Client 通过 ApplicationClientProtocol 与 ResourceManager ResourceManager 也是通过 ApplicationClientProtocol 接收并完成客户端的请求。
+Client 通过 ApplicationClientProtocol 向 ResourceManager 提交请求，ResourceManager 也是通过 ApplicationClientProtocol 来接收并完成客户端的请求。其中 ClientRMService 是 ResourceManager 中对于 ApplicationClientProtocol 协议的实现，负责处理客户端发来的所有 RPC 请求。
 
-其中 ClientRMService 是 ResourceManager 中对于 ApplicationClientProtocol 协议的实现，负责处理客户端发来的所有 RPC 请求。
+ResourceManager 所接收到的来自客户端的 submitApplication 请求，便也是由 ClientRMService 来处理。
 
-所以 ResourceManager 所接收到的来自客户端的 submitApplication 请求，便也是由 ClientRMService 来处理。
-
-### **请求传递给 YARN 应用的真正管理者：RMAppManager**
+<br><h3 id="4"><b>请求传递给 YARN 应用的真正管理者：RMAppManager</b></h3>
 
 RMAppManager 是一个管家，为 ResourceManager 管理应用。当 ClientRMService 接收到的应用请求，需要直接交给 RMAppManager 代为处理。
 
@@ -40,7 +43,7 @@ RMAppManager 在接受到一个应用请求之后，首先需要为该应用创�
 
     RMAppManager 首先会为新应用创建一个 RMAppImpl 实例用来存储该应用的各项状态，并将该实例加入到 ResourceManager 应用列表中。
 
-    应用列表维护在 rmContext(关于 rmContext 更多信息可以回看 [ResourceManager 有什么](./4.&#32;RM.md) 篇)中，是一个以 ApplicationId 作为 KEY 的 ConcurrentMap:
+    应用列表维护在 rmContext(关于 rmContext ，是一个以 ApplicationId 作为 KEY 的 ConcurrentMap:
     ```
     RMAppImpl application = new RMAppImpl(...);
     rmContext.getRMApps().putIfAbsent(applicationId, application)
@@ -88,9 +91,9 @@ RMAppManager 在接受到一个应用请求之后，首先需要为该应用创�
     }
     ```
 
-    事件派发机制详见：[RM 中的事件机制](./3.2&#32;EventDispatcher.md), 通过产生事件，会触发相应组件的状态机流转，进而再产生动作及事件，联动系统内各个组件。
+    事件派发机制详见：[「支线」ResourceManager 之事件机制](./3.2&#32;EventDispatcher.md), 通过产生事件，会触发相应组件的状态机流转，进而再产生动作及事件，联动系统内各个组件。
 
-### **从 `NEW` 到 `NEW_SAVING`**
+<br><h3 id="5"><b>从 `NEW` 到 `NEW_SAVING`</b></h3>
 
 RMAppManager 产生的 `RMAppEventType.START` 事件，在经过派发器的转发会交给具体的应用实例(RMAppImpl)来处理。RMAppImpl 中维护着这个应用的状态机，事件会直接导致状态机的状态流转，而在状态流转的过程中会产生新的动作或者事件。
 
@@ -140,7 +143,22 @@ RMAppManager 产生的 `RMAppEventType.START` 事件，在经过派发器的转�
 2. 完成本次动作后，应用状态从 `RMAppState.SUBMITTED` 转为 `RMAppState.ACCEPTED`
 
 
-### ***Reference***
+
+<br><h3 id="6"><b><i>相关链接</i></b></h3>
 
 
-### ***下一篇***
+
+<br>
+
+---
+
+<br>
+
+下一篇将介绍从 ACCEPTED 到 RUNNING。「[传送门](./5&#32;LaunchAM-2.md)」
+
+### **[回到目录](./README.md)**
+
+
+
+
+
