@@ -147,6 +147,24 @@ RMAppManager 产生的 `RMAppEventType.START` 事件，在经过派发器的转�
 
 <br><h3 id="8"><b><i>相关链接</i></b></h3>
 
+* [org.apache.hadoop.yarn.server.resourcemanager.ClientRMService](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ClientRMService.java#L159)
+
+* [org.apache.hadoop.yarn.server.resourcemanager.RMAppManager](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMAppManager.java#L65)
+
+* [org.apache.hadoop.yarn.event.AsyncDispatcher](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/event/AsyncDispatcher.java)
+
+* [org.apache.hadoop.yarn.server.resourcemanager.scheduler.ResourceScheduler](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/ResourceScheduler.java#L36)
+
+* [org.apache.hadoop.yarn.server.resourcemanager.scheduler.CapacityScheduler](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/capacity/CapacityScheduler.java#L124)
+  
+* [org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMApp](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/RMApp.java#L44)
+
+* [org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppImpl](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/RMAppImpl.java#L104)
+
+* [org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttempt](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/attempt/RMAppAttempt.java#L49)
+
+* [org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptImpl](https://github.com/apache/hadoop/blob/release-2.7.4-RC0/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/attempt/RMAppAttemptImpl.java#L109)
+
 <br>
 
 ---
