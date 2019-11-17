@@ -1,30 +1,39 @@
-# YARN 任务跟踪探明 - ApplicationMaster 启动流程
+# YARN 任务跟踪探明 (六)
+
+<br>
 
 ## 从 ACCEPTED 到 RUNNING
 
-![此处有图](TODO)
+* [先放图](./6&#32;LaunchAM-2.md#1)
+* [本篇提及到的组件](./6&#32;LaunchAM-2.md#2)
+* [从 RMAppAttemptImpl 开始](./6&#32;LaunchAM-2.md#3)
+* [TODO]()
 
-本篇提及到的组件：
+
+<br><h3 id="1"><b>先放图</b></h3>
+
+![NEW-ACCEPTED](./images/new-accept.png)
+
+<br><h3 id="2"><b>本篇提及到的组件</b></h3>
 
 * ResourceTrackerService
-* RMAppManager
-* RMAppImpl
-* RMStateStore
-* **RMAppAttemptImpl**
 * CapacityScheduler
+* RMAppManager
+* RMStateStore
+* RMAppImpl
 * RMNodeImpl
+* **RMAppAttemptImpl**
 * **RMContainerImpl**
 
-上一篇追踪了 RMAppImpl 从 NEW 到 ACCEPTED 状态流转中相关的事件处理。由于从 ACCEPTED 到 RUNNING 过程中，只有一步的切换，但是却涉及很多的组件交互以及事件触发，其中包括资源申请，心跳回报，容器创建等多个步骤，所以单独把这从 ACCEPTED 到 RUNNING 这一步抽取成一个篇章。
+上一篇追踪了 RMAppImpl 从 NEW 到 ACCEPTED 状态流转中相关的事件处理。由于从 ACCEPTED 到 RUNNING 过程中，只有一步的切换，但是却涉及很多的组件交互以及事件触发，其中包括资源申请，心跳回报，容器创建等多个步骤。
 
-本篇将同时追踪两个组件状态及其相关的事件：
+本篇将同时重点追踪两个组件状态及其相关的事件：
 * RMAppAttemptImpl
 * RMContainerImpl
 
+<br><h3 id="3"><b>从 RMAppAttemptImpl 开始</b></h3>
 
-### **从 RMAppAttemptImpl 开始**
-
-在 RMAppImpl 响应了 `RMAppEventType.APP_ACCEPTED` 事件之后，又触发了 `RMAppAttemptEventType.START` 事件，由于 RMAppAttemptImpl 内部也维护了一个状态机，对这个事件的响应自然也会触发新的动作，同时使得 RMAppAttemptImpl 状态发送流转。
+在 RMAppImpl 响应了 `RMAppEventType.APP_ACCEPTED` 事件之后，又触发了 `RMAppAttemptEventType.START` 事件，RMAppAttemptImpl 内部同样维护了一个状态机，对这个事件的响应自然也会触发新的动作，同时使得 RMAppAttemptImpl 状态发送流转。
 
 * RMAppAttemptImpl 从 `NEW` 到 `SUBMITTED`
 
@@ -56,7 +65,7 @@
 
 
 
-<br><h3 id="6"><b><i>相关链接</i></b></h3>
+<br><h3 id="9"><b><i>相关链接</i></b></h3>
 
 
 
