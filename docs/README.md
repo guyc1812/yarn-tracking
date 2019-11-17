@@ -20,6 +20,7 @@
 * [「主线」ResourceManager 出场](./3.&#32;ResourceManager.md)
     * [「支线」ResourceManager 之 RMContext](./3.1&#32;RMContext.md)
     * [「支线」ResourceManager 之事件机制](./3.2&#32;EventDispatcher.md)
+    * [「支线」ResourceManager 之 NodeManager (TODO)](./3.3&#32;RMHignAvaliable.md)
     * [「支线」ResourceManager 之高可用 (TODO)](./3.3&#32;RMHignAvaliable.md)
     * [「支线」ResourceManager 之资源调度器 (TODO)](./3.4&#32;ResourceScheduler.md)
 * [「主线」ApplicationMaster 出场](./4.&#32;ApplicationMaster.md)
