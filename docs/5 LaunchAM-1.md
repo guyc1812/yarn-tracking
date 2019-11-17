@@ -9,7 +9,9 @@
 * [从接收客户端应用提交请求开始](./5&#32;LaunchAM-1.md#3)
 * [请求传递给 YARN 应用的真正管理者：RMAppManager](./5&#32;LaunchAM-1.md#4)
 * [从 `NEW` 到 `NEW_SAVING`](./5&#32;LaunchAM-1.md#5)
-* [相关链接](./5&#32;LaunchAM-1.md#6)
+* [从 `NEW_SAVING` 到 `SUBMITTED`](./5&#32;LaunchAM-1.md#6)
+* [从 `SUBMITTED` 到 `ACCEPTED`](./5&#32;LaunchAM-1.md#7)
+* [相关链接](./5&#32;LaunchAM-1.md#8)
 
 <br><h3 id="1"><b>先放图</b></h3>
 
@@ -108,7 +110,7 @@ RMAppManager 产生的 `RMAppEventType.START` 事件，在经过派发器的转�
 
 2. 完成本次动作后，应用状态从 `RMAppState.NEW` 转为 `RMAppState.NEW_SAVING`
 
-### **从 `NEW_SAVING` 到 `SUBMITTED`**
+<br><h3 id="6"><b>从 `NEW_SAVING` 到 `SUBMITTED`</b></h3>
 
 `RMAppEventType.APP_NEW_SAVED` 事件的触发，会产生两个影响：
 
@@ -122,7 +124,7 @@ RMAppManager 产生的 `RMAppEventType.START` 事件，在经过派发器的转�
 
 2. 完成本次动作后，应用状态从 `RMAppState.NEW_SAVING` 转为 `RMAppState.SUBMITTED`
 
-### **从 `SUBMITTED` 到 `ACCEPTED`**
+<br><h3 id="7"><b>从 `SUBMITTED` 到 `ACCEPTED`</b></h3>
 
 `RMAppEventType.APP_ACCEPTED` 事件的触发，会产生两个影响：
 
@@ -143,10 +145,7 @@ RMAppManager 产生的 `RMAppEventType.START` 事件，在经过派发器的转�
 2. 完成本次动作后，应用状态从 `RMAppState.SUBMITTED` 转为 `RMAppState.ACCEPTED`
 
 
-
-<br><h3 id="6"><b><i>相关链接</i></b></h3>
-
-
+<br><h3 id="8"><b><i>相关链接</i></b></h3>
 
 <br>
 
