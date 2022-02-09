@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <scala.version>2.11.12</scala.version>
         <spark.version>2.3.0</spark.version>
-        <hadoop.version>2.7.4</hadoop.version>
+        <hadoop.version>2.10.1</hadoop.version>
         <scala.maven.version>2.11.12</scala.maven.version>
         <scala.version.suffix>_2.11</scala.version.suffix>
         <PermGen>128m</PermGen>
